@@ -32,6 +32,4 @@ async def create_student(student: Student):
         return object_id_to_str(inserted_student)  # Return the modified student
     except DuplicateKeyError:
         raise HTTPException(status_code=409, detail="Student with this ID already exists")
-        @app.get("/test")
-async def test_endpoint():
-    return {"message": "This is a test endpoint!"}
+        
