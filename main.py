@@ -1,12 +1,11 @@
 # main.py
-app = FastAPI()
 from fastapi import FastAPI, HTTPException, status
 from pymongo.errors import DuplicateKeyError
 from models import Student, StudentUpdate
 from database import student_collection
 from bson import ObjectId
 
-  # This line should be at the beginning
+ app = FastAPI() # This line should be at the beginning
 
 # Helper function to convert ObjectId to string
 def object_id_to_str(obj):
